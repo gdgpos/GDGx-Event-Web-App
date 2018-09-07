@@ -1,6 +1,6 @@
 var app = angular.module('gdgapp',['ngRoute','ngAnimate']).
                 config(function($routeProvider,$locationProvider){
-                    $locationProvider.html5Mode(true)
+                    $locationProvider.html5Mode(true);
                     $routeProvider
                         .when('/attending',{
                             templateUrl:"./views/attending.html",
@@ -41,7 +41,7 @@ app.controller('speakersCtrl',function($scope,$http){
     .then(res=>res.json())
     .then(data => {
         $scope.speakersData = data;
-    })
+    });
 
     fetch('data/patners.json')
     .then(res=>res.json())
@@ -49,7 +49,7 @@ app.controller('speakersCtrl',function($scope,$http){
         $scope.patData = data;
     })
 
-})
+});
 
 app.controller('sessionsCtrl',function($scope, $http){
     document.body.scrollTop = 0;
@@ -58,13 +58,13 @@ app.controller('sessionsCtrl',function($scope, $http){
     .then(res=>res.json())
     .then(data => {
         $scope.sessionsData = data;
-    })
+    });
 
     fetch('data/patners.json')
     .then(res=>res.json())
     .then(data => {
         $scope.patData = data;
-    })
+    });
     
     $scope.varSessions = true;
     $scope.varSchedule = false;
@@ -80,7 +80,7 @@ app.controller('sessionsCtrl',function($scope, $http){
         angular.element(document.querySelector("#showScheduleID")).removeClass("active-bar");
 
         angular.element(document.querySelector("#showScheduleID")).addClass("inactive-bar");
-    }
+    };
 
     $scope.showSchedule = function(){
         $scope.varSessions = false;
@@ -95,7 +95,7 @@ app.controller('sessionsCtrl',function($scope, $http){
         angular.element(document.querySelector("#showSessionID")).addClass("inactive-bar");
     }
 
-})
+});
 
 app.controller('homeCtrl',function($scope,$http){
     document.body.scrollTop = 0;
@@ -106,26 +106,26 @@ app.controller('homeCtrl',function($scope,$http){
     .then(res=>res.json())
     .then(data => {
         $scope.homeJson = data;
-    })
+    });
 
     fetch('data/sessions.json')
     .then(res=>res.json())
     .then(data => {
         $scope.sessionsData = data;
-    })
+    });
 
     fetch('data/speakers.json')
     .then(res=>res.json())
     .then(data => {
         $scope.speakersData = data;
-    })
+    });
 
     fetch('data/patners.json')
     .then(res=>res.json())
     .then(data => {
         $scope.patData = data;
     })
-})
+});
 
 app.controller('regCtrl',function($scope,$http){
     document.body.scrollTop = 0;
@@ -137,7 +137,7 @@ app.controller('regCtrl',function($scope,$http){
     .then(res=>res.json())
     .then(data => {
         $scope.regJson = data;
-    })
+    });
 
     document.getElementById('UserDetails').style.display = "none";
     document.getElementById('confirmation').style.display = "none";
@@ -227,7 +227,7 @@ app.controller('regCtrl',function($scope,$http){
             // An error happened.
             });
         }
-    }
+    };
 
     var email;
     var uid;
@@ -294,7 +294,7 @@ app.controller('regCtrl',function($scope,$http){
         }
     });
 
-})
+});
 
 app.controller('attendingCtrl',function($scope,$http){
     document.body.scrollTop = 0;
@@ -309,7 +309,7 @@ app.controller('attendingCtrl',function($scope,$http){
     })
 
  
-})
+});
 
 app.controller('ctrlSchedule',function($scope,$http){
     var edata = $http.get('data/schedule.json');
@@ -318,10 +318,10 @@ app.controller('ctrlSchedule',function($scope,$http){
     .then(res=>res.json())
     .then(data => {
         $scope.schData = data;
-})
+});
 
 $scope.schData = edata;
-})
+});
 
 app.controller('footerCtrl',function($scope){
     fetch('data/footer.json')
@@ -329,4 +329,4 @@ app.controller('footerCtrl',function($scope){
     .then(data => {
         $scope.footerData = data;
     })
-})
+});

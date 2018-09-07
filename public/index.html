@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no,user-scalable=0">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <title>GDG DevFest'18 | GDG Jalandhar</title>
+    <title>GDG POS DevFest 18</title>
 
     <base href="/">
     <meta name="description" content="GDG DevFest brings together people who shape the future of Android, Web and Cloud technologies for 2 days of sessions, workshops and networking.">
@@ -31,27 +31,22 @@
 
     <link rel="manifest" href="manifest.json">
     
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-84991751-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+    <!--&lt;!&ndash; Global site tag (gtag.js) - Google Analytics &ndash;&gt;-->
+    <!--<script async src="https://www.googletagmanager.com/gtag/js?id=UA-84991751-1"></script>-->
+    <!--<script>-->
+        <!--window.dataLayer = window.dataLayer || [];-->
+        <!--function gtag(){dataLayer.push(arguments);}-->
+        <!--gtag('js', new Date());-->
 
-        gtag('config', 'UA-84991751-1');
-    </script>
-
-    <script>
-        console.log("Designed and Developed By Varsha Jaiswal & Sonakshi Shukla");
-        console.log("Developer: Kishan Patel, Yash Pathak & Vrijraj Singh");
-    </script>
+        <!--gtag('config', 'UA-84991751-1');-->
+    <!--</script>-->
 
             
     <!-- register service worker -->
     <script>
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', function() {
-                navigator.serviceWorker.register('sw.js')
+                navigator.serviceWorker.register('sw.js', {scope:"."})
                     .then(function() { console.log("Service Worker Registered"); });
                 });
         }
@@ -63,7 +58,7 @@
     <nav class="navbar navbar-expand-lg navbar-light white fixed-top" style="z-index: 5;">
         <div class="container-fluid col-md-10 offset-md-1 offset-lg-1 offset-xl-1 pr-0 col-md-10 col-12">
 
-            <a class="navbar-brand google-font" style="color: #616161" href="/"><b>GDG DevFest'18</b></a>
+            <a class="navbar-brand google-font" style="color: #616161" href="/"><b>GDG Port-of-Spain DevFest 18</b></a>
 
             <div class="collapse navbar-collapse" id="navbarTogglerDemo01">      
                 <ul class="navbar-nav mr-auto mt-lg-0">
@@ -241,13 +236,14 @@
     <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase.js"></script>
     <script>
       // Initialize Firebase
+      // Initialize Firebase
       var config = {
-        apiKey: "AIzaSyBaIzx6xjSzzxWwb0EZOuxTvwPsH0ma7vU",
-        authDomain: "devfest18-test.firebaseapp.com",
-        databaseURL: "https://devfest18-test.firebaseio.com",
-        projectId: "devfest18-test",
-        storageBucket: "devfest18-test.appspot.com",
-        messagingSenderId: "988008561693"
+	      apiKey: "AIzaSyAafmk6U5Q2bjQ0XQvO_CVaDTLffMyaqP4",
+	      authDomain: "devfest-71724.firebaseapp.com",
+	      databaseURL: "https://devfest-71724.firebaseio.com",
+	      projectId: "devfest-71724",
+	      storageBucket: "devfest-71724.appspot.com",
+	      messagingSenderId: "983768383237"
       };
       firebase.initializeApp(config);
     </script>
