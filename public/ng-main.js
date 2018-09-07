@@ -3,29 +3,29 @@ var app = angular.module('gdgapp',['ngRoute','ngAnimate']).
                     $locationProvider.html5Mode(true)
                     $routeProvider
                         .when('/attending',{
-                            templateUrl:"views/attending.html",
+                            templateUrl:"./views/attending.html",
                             controller:"attendingCtrl"
                         })
                         .when('/registration',{
-                            templateUrl:"views/registration.html",
+                            templateUrl:"./views/registration.html",
                             controller:"regCtrl"
                         })
                         .when('/speakers',{
-                            templateUrl:"views/speakers.html",
+                            templateUrl:"./views/speakers.html",
                             controller:"speakersCtrl"
                         })
                         .when('/sessions',{
-                            templateUrl:"views/sessions.html",
+                            templateUrl:"./views/sessions.html",
                             controller:"sessionsCtrl"
                         })
                         .when('/registration',{
-                            templateUrl:"views/registration.html",
+                            templateUrl:"./views/registration.html",
                             controller:"regCtrl"
                         })
 
                         .otherwise({
                             redirectTo:"/",
-                            templateUrl:"views/home.html",
+                            templateUrl:"./views/home.html",
                             controller:"homeCtrl"
                         })
                 });

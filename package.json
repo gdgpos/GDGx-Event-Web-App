@@ -1,0 +1,23 @@
+{
+  "name": "devfest",
+  "version": "1.0.0",
+  "description": "<p align=\"center\">\r <img width=\"800px\" src=\"https://devfest18-jalandhar.firebaseapp.com/assets/img/brand.jpg\">\r </p>\r Standard Web App for GDG[X] Event. <br>\r [Demo](https://devfest18-test.firebaseapp.com) <br>\r Version: 1.0.2",
+  "main": "index.js",
+  "scripts": {
+    "build-sw":"workbox generateSW"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gdgpos/GDGx-Event-Web-App.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gdgpos/GDGx-Event-Web-App/issues"
+  },
+  "homepage": "https://github.com/gdgpos/GDGx-Event-Web-App#readme",
+  "devDependencies": {
+    "workbox-cli": "^3.4.1"
+  }
+}
